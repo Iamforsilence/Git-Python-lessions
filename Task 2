@@ -1,0 +1,18 @@
+#2. Пользователь вводит время в секундах. Переведите время в часы, минуты и секунды и выведите
+# в формате чч:мм:сс. Используйте форматирование строк.
+
+seconds = int(input("Введите время в секундах"))
+
+if 3600 > seconds > 0:
+    minutes = seconds // 60
+    seconds = seconds % 60
+    hour = 0
+    print(f"{hour}ч:{minutes}м:{seconds}с")
+elif seconds <= 0:
+    print("Ошибка. Вы ввели некорректное значение")
+else:
+    minutes = seconds // 60
+    seconds = seconds % 60
+    hour = minutes // 60
+    minutes = minutes % 60
+    print(f"{hour}ч:{minutes}м:{seconds}с")
