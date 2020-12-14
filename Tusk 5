@@ -1,0 +1,26 @@
+# 5. Программа запрашивает у пользователя строку чисел, разделенных пробелом. При нажатии Enter должна
+# выводиться сумма чисел. Пользователь может продолжить ввод чисел, разделенных пробелом и снова нажать
+# Enter. Сумма вновь введенных чисел будет добавляться к уже подсчитанной сумме. Но если вместо числа
+# вводится специальный символ, выполнение программы завершается. Если специальный символ введен после
+# нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого
+# завершить программу.
+
+def sum_number(numbers):
+    for i, el in enumerate(numbers):
+        numbers[i] = int(el)
+    result = sum(numbers)
+    return result
+
+
+total = 0
+while True:
+    person_number = input("Введите числа через пробел (Если заходите остановить программу введите stop):").split()
+    if "stop" in person_number:
+        person_number = person_number[:-1]
+        sum_number(person_number)
+        total = sum_number(person_number) + total
+        print(total)
+        break
+    sum_number(person_number)
+    total = sum_number(person_number) + total
+    print(total)

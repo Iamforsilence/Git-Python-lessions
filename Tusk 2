@@ -1,0 +1,13 @@
+# 2. Реализовать функцию, принимающую несколько параметров, описывающих данные пользователя: имя, фамилия,
+# год рождения, город проживания, email, телефон. Функция должна принимать параметры как именованные аргументы.
+# Реализовать вывод данных о пользователе одной строкой.
+
+def person_characteristics(**kwargs):
+    for el in kwargs:
+        print(kwargs[el], end="; ")
+
+
+all_characteristics = input("Введите Имя, Фамилию, Год рождения, Город проживания, Email, Номер телефона"
+                            " через пробелы").split()
+person_characteristics(name=all_characteristics[0], surname=all_characteristics[1], year_birth=all_characteristics[2],
+                       town=all_characteristics[3], email=all_characteristics[4], phone_number=all_characteristics[5])
