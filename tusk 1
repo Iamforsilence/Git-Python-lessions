@@ -1,0 +1,26 @@
+# 1. Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
+# Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
+
+def fraction(a, b):
+    return a / b
+
+
+while True:
+    dividend = int(input("Введите делимое:"))
+    divider = int(input("Введите делитель:"))
+
+    if divider == 0:
+        while True:
+            next_step = input("Деление на ноль! Продолжить Да/Нет?")
+            if next_step.lower() == "да":
+                break
+            elif next_step.lower() == "нет":
+                break
+            else:
+                print("Некорректный ввод!")
+                continue
+        if next_step.lower() == "да":
+            continue
+        else:
+            break
+    print(fraction(dividend, divider))

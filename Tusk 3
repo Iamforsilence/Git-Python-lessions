@@ -1,0 +1,15 @@
+# 3. Реализовать функцию my_func(), которая принимает три позиционных аргумента, и возвращает сумму
+# наибольших двух аргументов.
+
+def my_func(number_1, number_2, number_3):
+    new_list = sorted([number_1, number_2, number_3])
+    sum_number = new_list[-1] + new_list[-2]
+    return sum_number
+
+
+person_number_1 = int(input('Введите число a:'))
+person_number_2 = int(input('Введите число b:'))
+person_number_3 = int(input('Введите число с:'))
+
+my_func(person_number_1, person_number_2, person_number_3)
+print(my_func(person_number_1, person_number_2, person_number_3))
